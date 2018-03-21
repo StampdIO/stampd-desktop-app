@@ -1,0 +1,24 @@
+$module: 'notification';
+.#{$module} {
+  position: absolute;
+  z-index: $z_index_max;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $c_mine_shaft;
+  overflow: hidden;
+
+  &[data-notification-type="success"] {
+    background: $c_sea_green;
+  }
+
+  &[data-notification-type="error"] {
+    background: $c_thunderbird;
+  }
+
+  &__content {
+    font-size: 1.3rem;
+    color: $c_white;
+    padding: 1rem;
+  }
+}

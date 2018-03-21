@@ -1,0 +1,52 @@
+/* =========================================
+		VARIABLES & MIXINS
+   ========================================= */
+@import "_config/variables";
+@import "_config/mixins";
+@import "_config/helpers";
+@import "_config/utilities";
+/* =========================================
+		VENDOR
+   ========================================= */
+@import "_vendor/normalize";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: auto;
+  font-size: 1em;
+  min-width: 400px;
+  background: $c_alabaster;
+  color: $c_black;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $c_cerulean;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+  color: $c_mine_shaft;
+}
+
+form {
+  transition: opacity $t_medium_animation hpmEasing('outSine');
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

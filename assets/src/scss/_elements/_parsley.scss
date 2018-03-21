@@ -1,0 +1,21 @@
+.input__el {
+  &.parsley-error {
+    border-color: $c_carnation;
+  }
+}
+
+.parsley-errors-list {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  @include hpmListOverride();
+  font-size: 1rem;
+  color: $c_carnation;
+  transition: $t_medium_animation hpmEasing('outSine');
+  opacity: 0;
+  pointer-events: none;
+
+  &.filled {
+    opacity: 1;
+  }
+}

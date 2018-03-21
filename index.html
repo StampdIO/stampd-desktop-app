@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stampd.io Stamping Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/plugin.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="container__title">Stampd.io Blockchain Stamping</h1>
+
+    <div class="tabs">
+        <div class="tabs__menu">
+            <button class="tabs__tab" data-tab-btn="stamp">Stamp</button>
+            <button class="tabs__tab" data-tab-btn="settings">Settings</button>
+        </div>
+        <div class="tabs__contents">
+            <div class="tabs__content" data-tab-content="stamp">
+                <p>Stamp the full content or a screenshot of the visible area of the current tab.</p>
+                <form class="js-form-stamp" data-parsley-validate="">
+                    <div class="input input--select">
+                        <select name="blockchain" class="input__el" required="">
+                            <option value="" disabled selected>Select blockchain</option>
+                            <option value="BTC">Bitcoin</option>
+                            <option value="ETH">Ethereum</option>
+                            <option value="BCH">Bitcoin Cash</option>
+                            <option value="DASH">Dash</option>
+                        </select>
+                    </div>
+
+                    <div class="input input--select">
+                        <select name="type" class="input__el" required="">
+                            <option value="" disabled selected>Stamp type</option>
+                            <option value="page_content">Page content</option>
+                            <option value="screenshot">Screenshot</option>
+                        </select>
+                    </div>
+
+                    <button class="button button--default" type="submit">Stamp Document</button>
+                </form>
+            </div>
+            <div class="tabs__content" data-tab-content="settings">
+                <p>Get your client ID and secret key on <a href="https://stampd.io" target="_blank">stampd.io</a>.</p>
+                <form class="js-form-credentials" data-parsley-validate="">
+                    <div class="input">
+                        <input name="client_id" placeholder="Client ID" type="text" class="input__el"
+                               autocomplete="off" data-parsley-minlength="3" required="">
+                    </div>
+                    <div class="input">
+                        <input name="secret_key" placeholder="Secret Key" type="password" class="input__el"
+                               autocomplete="off" data-parsley-minlength="3" required="">
+                    </div>
+                    <button class="button button--default" type="submit">Save</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="notification js-notification" style="display: none;">
+    <div class="notification__content js-notification__content"></div>
+</div>
+
+<script>
+  require('parsley')
+  require('./assets/js/sha256.js')
+  window.$ = window.jQuery = require('jquery')
+  require('./assets/js/renderer.js')
+</script>
+</body>
+</html>

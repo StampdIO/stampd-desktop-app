@@ -1,0 +1,94 @@
+/* =========================================
+		COLORS AND DEFINITIONS
+   ========================================= */
+
+// black and white
+$c_white: #FFF;
+$c_alabaster: #fcfcfc;
+$c_alto : #d0d0d0;
+$c_silver_chalice: #9e9e9e;
+$c_mine_shaft: #313131;
+$c_black: #000;
+
+$c_sea_green: #2e7d32;
+
+$c_thunderbird: #b71c1c;
+$c_carnation: #F85C4F;
+
+$c_cerulean: #039be5;
+$c_cornflower_blue: #6E8CEE;
+
+/* =========================================
+		Z-INDEX
+   ========================================= */
+
+$z_index_back: -1;
+$z_index_min: 1;
+$z_index_overlay: 1000;
+$z_index_max: 9999;
+
+/* =========================================
+		SIZING & BREAKPOINTS
+   ========================================= */
+
+//$s_header_height : 78px;
+//$s_header_height--mobile : 136px;
+//$s_header_height--mobile--menu-opened : 271px;
+
+// content max width
+//$s_container_max_width : 1160px;
+//$s_container_inner_max_width : 1800px;
+
+// responsive breakpoints
+//$sr_desktop_large : 1921px;
+//$sr_tablet_landscape : 1330px;
+//$sr_tablet_portrait : 1050px;
+//$sr_mobile_landscape : 900px;
+//$sr_mobile_portrait : 500px;
+
+$sr_xs: 360px;
+$sr_sm: 768px;
+$sr_md: 1024px;
+$sr_lg: 1200px;
+
+// tablet size increase ratio
+$r_tablet: 1.8;
+$r_tablet_smaller: 1.4;
+
+//$sr_onload_effects : 1000px;
+// onload effects will be shown from this width upwards
+
+/* =========================================
+		TIMINGS
+   ========================================= */
+
+$t_fast_animation: 60ms;
+$t_fast_medium_animation: 110ms;
+$t_medium_animation: 250ms;
+$t_slow_medium_animation: 440ms;
+$t_slow_animation: 780ms;
+$t_very_slow_animation: 1600ms;
+
+/* =========================================
+		VENDOR VARIABLES
+   ========================================= */
+
+//$responsive : true;
+//$mobile-first : false;
+//$use-silent-classes : false;
+//$use-markup-fix : false;
+//$gutter : 1%;
+//$gutter_custom : 2%;
+//
+//$breakpoints : (
+//		'mobile-portrait' '(max-width: ' + $sr_mobile_portrait + ')',
+//		'mobile-landscape' '(max-width: ' + $sr_mobile_landscape + ') and (min-width: '+ ($sr_mobile_portrait + 1px) + ')',
+//		'tablet-portrait' '(max-width: ' + $sr_tablet_portrait + ') and (min-width: '+ ($sr_mobile_landscape + 1px) + ')',
+//		'tablet-landscape' '(max-width: ' + $sr_tablet_landscape + ') and (min-width: '+ ($sr_tablet_portrait + 1px) + ')',
+//		'desktop-normal' '(min-width: ' + ($sr_tablet_landscape + 1px) + ') and (max-width: '+ ($sr_desktop_large - 1px) + ')',
+//		'desktop-large' '(min-width: ' + ($sr_desktop_large) + ')',
+//);
+//
+//$breakpoint-has-widths : ('mobile-portrait', 'mobile-landscape', 'tablet-portrait', 'tablet-landscape', 'desktop-normal', 'desktop-large') !default;
+//$breakpoint-has-push : ('mobile-portrait', 'mobile-landscape', 'tablet-portrait', 'tablet-landscape', 'desktop-normal', 'desktop-large') !default;
+//$breakpoint-has-pull : ('mobile-portrait', 'mobile-landscape', 'tablet-portrait', 'tablet-landscape', 'desktop-normal', 'desktop-large') !default;

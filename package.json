@@ -1,0 +1,33 @@
+{
+  "name": "stampd-blockchain-stamping",
+  "version": "1.0.0",
+  "description": "Stampd.io Blockchain Stamping",
+  "main": "./assets/js/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm start\" \"gulp\"",
+    "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac.icns --prune=true --out=release-builds --app-copyright=\"Copyright Stampd.io 2018 onwards\"",
+    "build-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win.ico --prune=true --out=release-builds --version-string.CompanyName=Stampd.io --version-string.FileDescription=\"Stampd.io Blockchain Stamping App\" --version-string.ProductName=\"Stampd.io Blockchain Stamping\" --app-copyright=\"Copyright Stampd.io 2018 onwards\"",
+    "build-linux": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/linux.png --prune=true --out=release-builds --app-copyright=\"Copyright Stampd.io 2018 onwards\""
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "concurrently": "^3.5.1",
+    "electron": "~1.8.2",
+    "electron-packager": "^11.1.0",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-util": "latest",
+    "gulp-watch": "latest"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "parsley": "^0.1.0",
+    "electron-settings": "^3.1.4"
+  }
+}

@@ -1,0 +1,33 @@
+$module: 'button';
+.#{$module} {
+
+  @include hpmInlineBlock(middle);
+  width: 100%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-decoration: none;
+  color: $c_white;
+  background: $c_cornflower_blue;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: $t_medium_animation hpmEasing('outSine');
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+
+  //&__group {
+  //  > .#{$module} {
+  //    margin-bottom: 1rem;
+  //
+  //    &:last-of-type {
+  //      margin-bottom: 0;
+  //    }
+  //  }
+  //}
+}

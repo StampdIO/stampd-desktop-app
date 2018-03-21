@@ -1,0 +1,31 @@
+$module: 'input';
+.#{$module} {
+
+  position: relative;
+  margin-top: 1rem;
+
+  &__el {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $c_silver_chalice;
+    color: $c_black;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    transition: $t_medium_animation hpmEasing('outSine');
+
+    &:focus {
+      color: $c_cornflower_blue;
+      border-color: $c_cornflower_blue;
+    }
+
+    @include hpmPlaceholder(true) {
+      color: $c_silver_chalice;
+    }
+  }
+}
