@@ -33,14 +33,6 @@
                         </select>
                     </div>
 
-                    <div class="input input--select">
-                        <select name="type" class="input__el" required="">
-                            <option value="" disabled selected>Stamp type</option>
-                            <option value="page_content">Page content</option>
-                            <option value="screenshot">Screenshot</option>
-                        </select>
-                    </div>
-
                     <button class="button button--default" type="submit">Stamp Document</button>
                 </form>
             </div>
@@ -69,7 +61,6 @@
 
 <script>
   require('parsley')
-  require('./assets/js/sha256.js')
   window.$ = window.jQuery = require('jquery')
   require('./assets/js/renderer.js')
 </script>
