@@ -1,4 +1,4 @@
-# Stampd.io Chrome Extension
+# Stampd.io Desktop Application
 
 Use our API to post a hash of a file saved in your local file system on the blockchain.
 
