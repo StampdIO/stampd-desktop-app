@@ -8,7 +8,8 @@
     "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm start\" \"gulp\"",
     "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac.icns --prune=true --out=release-builds --app-copyright=\"Copyright Stampd.io 2018 onwards\"",
     "build-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win.ico --prune=true --out=release-builds --version-string.CompanyName=Stampd.io --version-string.FileDescription=\"Stampd.io Blockchain Stamping App\" --version-string.ProductName=\"Stampd.io Blockchain Stamping\" --app-copyright=\"Copyright Stampd.io 2018 onwards\"",
-    "build-linux": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/linux.png --prune=true --out=release-builds --app-copyright=\"Copyright Stampd.io 2018 onwards\""
+    "build-linux": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/linux.png --prune=true --out=release-builds --app-copyright=\"Copyright Stampd.io 2018 onwards\"",
+    "build-all": "npm run build-mac && npm run build-win && npm run build-linux"
   },
   "devDependencies": {
     "browser-sync": "latest",
