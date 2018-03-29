@@ -6,7 +6,7 @@ const SHA256 = require("crypto-js/sha256");
 // On ready, init
 $(function () {
 
-  var HASH_PREFIX = '5354414d50442323';
+  var HASH_PREFIX = '';
   // var API_URL = 'http://dev.stampd.io/api/v2.php';
   var API_URL = 'https://stampd.io/api/v2.php';
 
@@ -89,6 +89,11 @@ $(function () {
       requestedURL: "hash",
       hash: hash,
       blockchain: blockchain,
+      meta_category: 'Desktop App',
+      // meta_filename
+      // meta_category
+      // meta_notes
+      // meta_emails
     }, function (res) {
       var res_json = JSON.parse(res);
       cb(res_json ? res_json : false);
