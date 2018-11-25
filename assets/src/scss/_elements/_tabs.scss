@@ -7,10 +7,9 @@ $module: 'tabs';
     overflow-y: hidden;
     height: 48px;
     width: 100%;
-    background-color: $c_white;
+    background-color: transparent;
     margin: 0 auto;
     white-space: nowrap;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   }
 
   &__tab {
@@ -25,9 +24,9 @@ $module: 'tabs';
     text-overflow: ellipsis;
     overflow: hidden;
     opacity: 0.75;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
-    color: $c_cornflower_blue;
+    color: $c_white;
     transition: $t_medium_animation hpmEasing('outSine');
 
     &:hover {
@@ -36,7 +35,7 @@ $module: 'tabs';
 
     &.is-active {
       opacity: 1;
-      border-color: $c_cornflower_blue;
+      border-color: $c_white;
     }
   }
 

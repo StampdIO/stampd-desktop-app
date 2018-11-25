@@ -1,6 +1,7 @@
 /* =========================================
 		VARIABLES & MIXINS
    ========================================= */
+@import "_config/fonts";
 @import "_config/variables";
 @import "_config/mixins";
 @import "_config/helpers";
@@ -20,12 +21,12 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter UI', sans-serif;
   height: auto;
   font-size: 1em;
   min-width: 400px;
-  background: $c_alabaster;
-  color: $c_black;
+  background: $c_sharade;
+  color: $c_white;
   font-weight: normal;
   position: relative;
   margin: 0;
@@ -33,13 +34,13 @@ body {
 }
 
 a {
-  color: $c_cerulean;
+  color: $c_sushi;
   text-decoration: none;
 }
 
 p {
   font-size: 1.2rem;
-  color: $c_mine_shaft;
+  color: $c_white;
 }
 
 form {

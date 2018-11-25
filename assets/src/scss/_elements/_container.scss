@@ -5,11 +5,17 @@ $module: 'container';
   width: 100%;
 
   &__title {
-    color: $c_mine_shaft;
+    display: block;
+    color: $c_white;
     font-size: 1.8rem;
     line-height: 110%;
     margin: 1.2rem 0 1.2rem 0;
     text-align: center;
+
+    svg {
+      @include hpmInlineBlock();
+      max-height: 40px;
+    }
   }
 
   &__max-width {

@@ -1,6 +1,6 @@
 .input__el {
   &.parsley-error {
-    border-color: $c_carnation;
+    border-color: $c_error_dark;
   }
 }
 
@@ -10,7 +10,7 @@
   bottom: 5px;
   @include hpmListOverride();
   font-size: 1rem;
-  color: $c_carnation;
+  color: $c_error_dark;
   transition: $t_medium_animation hpmEasing('outSine');
   opacity: 0;
   pointer-events: none;

@@ -9,25 +9,17 @@ $module: 'button';
   -webkit-appearance: none;
   text-decoration: none;
   color: $c_white;
-  background: $c_cornflower_blue;
+  background: transparentize($c_white, .78);
   text-align: center;
-  letter-spacing: .5px;
-  transition: $t_medium_animation hpmEasing('outSine');
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 2rem;
   text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 16px 24px;
+  margin: 20px 0 0 0;
 
-  //&__group {
-  //  > .#{$module} {
-  //    margin-bottom: 1rem;
-  //
-  //    &:last-of-type {
-  //      margin-bottom: 0;
-  //    }
-  //  }
-  //}
+  transition: $t_medium_animation hpmEasing('outSine');
+
+  &:hover {
+    background: linear-gradient(90deg, #3ab03e, #0089d0);
+  }
 }
