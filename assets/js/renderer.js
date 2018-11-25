@@ -7,8 +7,8 @@ const SHA256 = require("crypto-js/sha256");
 $(function () {
 
   const HASH_PREFIX = '';
-  const API_URL = 'http://localhost/stampd-v3/api/v2.php';
-  // const API_URL = 'https://stampd.io/api/v2.php';
+  // const API_URL = 'http://localhost/stampd-v3/api/v2.php';
+  const API_URL = 'https://stampd.io/api/v2.php';
 
   const $blockchain = $('[name="blockchain"]');
   const $client_id = $('[name="client_id"]');
