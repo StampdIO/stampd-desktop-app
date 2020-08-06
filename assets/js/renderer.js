@@ -12,7 +12,7 @@ $(function () {
     const API_URL = 'https://stampd.io/api/v2.php';
 
     const $blockchain = $('[name="blockchain"]');
-    const $client_id = $('[name="client_id"]');
+    // const $client_id = $('[name="client_id"]');
     const $secret_key = $('[name="secret_key"]');
 
     const $stamp_form = $(".js-form-stamp");
@@ -220,7 +220,8 @@ $(function () {
             }
 
             const fileStream = fs.createReadStream(fileNames[0], {
-                encoding: 'utf-8'
+                // do not set encoding here
+                // encoding: 'utf-8'
             });
 
             $stamp_form.addClass('is-disabled');
@@ -238,6 +239,7 @@ $(function () {
                     return;
                 }
 
+                // console.log(data)
                 sign_in(client_id, secret_key, function (code) {
                     if (!code || (code !== 200 && code !== 300)) {
                         $stamp_form.removeClass('is-disabled');
