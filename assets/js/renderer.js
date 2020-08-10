@@ -1,7 +1,7 @@
 const settings = require('electron-settings');
 const fs = require('fs');
 const { dialog } = require('electron').remote;
-// const SHA256 = require("crypto-js/sha256");
+const shell = require('electron').shell;
 const hasha = require('hasha');
 
 // On ready, init
@@ -12,7 +12,7 @@ $(function () {
     const API_URL = 'https://stampd.io/api/v2.php';
 
     const $blockchain = $('[name="blockchain"]');
-    // const $client_id = $('[name="client_id"]');
+    const $client_id = $('[name="client_id"]');
     const $secret_key = $('[name="secret_key"]');
 
     const $stamp_form = $(".js-form-stamp");
@@ -22,6 +22,13 @@ $(function () {
     const $tabContents = $('[data-tab-content]');
 
     let currentStamp = {};
+
+    // Handle links
+    // =========================================================
+    $(document).on('click', 'a[href^="http"]', function(event) {
+        event.preventDefault();
+        shell.openExternal(this.href);
+    });
 
     // Tabs
     // =========================================================
@@ -100,13 +107,6 @@ $(function () {
             cb(false);
         });
     };
-
-    // Calculate hash
-    // =========================================================
-
-    // const calc_hash = function (data, cb, filename) {
-    //     cb(SHA256(data), filename);
-    // };
 
     // Retrieved hash
     // =========================================================
@@ -219,10 +219,9 @@ $(function () {
                 return;
             }
 
-            const fileStream = fs.createReadStream(fileNames[0], {
-                // do not set encoding here
-                // encoding: 'utf-8'
-            });
+            // do not set encoding here
+            // encoding: 'utf-8'
+            const fileStream = fs.createReadStream(fileNames[0]);
 
             $stamp_form.addClass('is-disabled');
 
