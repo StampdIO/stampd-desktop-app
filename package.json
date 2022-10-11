@@ -15,7 +15,7 @@
     "browser-sync": "latest",
     "concurrently": "^3.5.1",
     "electron": "~1.8.2",
-    "electron-packager": "^11.2.0",
+    "electron-packager": "^16.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
     "gulp-csso": "latest",
